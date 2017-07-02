@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vivado HLS Report for 'Conv_Accel'
+================================================================
+* Date:           Sat Jun 17 17:05:37 2017
+
+* Version:        2015.3 (Build 1368829 on Mon Sep 28 20:31:51 PM 2015)
+* Project:        Lab7_HLS_Stream
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.55|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  3460202|  3460202|  3460203|  3460203|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+----------------------------+---------+---------+---------+---------+---------+
+        |                                      |                            |      Latency      |      Interval     | Pipeline|
+        |               Instance               |           Module           |   min   |   max   |   min   |   max   |   Type  |
+        +--------------------------------------+----------------------------+---------+---------+---------+---------+---------+
+        |grp_Conv_Accel_wrapped_conv_hw_fu_48  |Conv_Accel_wrapped_conv_hw  |  3460201|  3460201|  3460201|  3460201|   none  |
+        +--------------------------------------+----------------------------+---------+---------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |       14|      6|    1122|   1783|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      1|
+|Register         |        -|      -|       3|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       14|      6|    1125|   1784|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        5|      2|       1|      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+------------------------------+---------+-------+------+------+
+    |               Instance               |            Module            | BRAM_18K| DSP48E|  FF  |  LUT |
+    +--------------------------------------+------------------------------+---------+-------+------+------+
+    |Conv_Accel_CONTROL_BUS_s_axi_U        |Conv_Accel_CONTROL_BUS_s_axi  |        0|      0|    36|    40|
+    |grp_Conv_Accel_wrapped_conv_hw_fu_48  |Conv_Accel_wrapped_conv_hw    |       14|      6|  1086|  1743|
+    +--------------------------------------+------------------------------+---------+-------+------+------+
+    |Total                                 |                              |       14|      6|  1122|  1783|
+    +--------------------------------------+------------------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |   1|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |   1|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |                            Name                            | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                   |  2|   0|    2|          0|
+    |grp_Conv_Accel_wrapped_conv_hw_fu_48_ap_start_ap_start_reg  |  1|   0|    1|          0|
+    +------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                       |  3|   0|    3|          0|
+    +------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_AWADDR   |  in |    5|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_ARADDR   |  in |    5|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_RRESP    | out |    2|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_BVALID   | out |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_BREADY   |  in |    1|    s_axi   |      CONTROL_BUS     |  return void |
+|s_axi_CONTROL_BUS_BRESP    | out |    2|    s_axi   |      CONTROL_BUS     |  return void |
+|ap_clk                     |  in |    1| ap_ctrl_hs |      Conv_Accel      | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |      Conv_Accel      | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |      Conv_Accel      | return value |
+|INPUT_STREAM_TDATA         |  in |   32|    axis    |  INPUT_STREAM_data_V |    pointer   |
+|INPUT_STREAM_TVALID        |  in |    1|    axis    |  INPUT_STREAM_dest_V |    pointer   |
+|INPUT_STREAM_TREADY        | out |    1|    axis    |  INPUT_STREAM_dest_V |    pointer   |
+|INPUT_STREAM_TDEST         |  in |    5|    axis    |  INPUT_STREAM_dest_V |    pointer   |
+|INPUT_STREAM_TKEEP         |  in |    4|    axis    |  INPUT_STREAM_keep_V |    pointer   |
+|INPUT_STREAM_TSTRB         |  in |    4|    axis    |  INPUT_STREAM_strb_V |    pointer   |
+|INPUT_STREAM_TUSER         |  in |    4|    axis    |  INPUT_STREAM_user_V |    pointer   |
+|INPUT_STREAM_TLAST         |  in |    1|    axis    |  INPUT_STREAM_last_V |    pointer   |
+|INPUT_STREAM_TID           |  in |    5|    axis    |   INPUT_STREAM_id_V  |    pointer   |
+|OUTPUT_STREAM_TDATA        | out |   32|    axis    | OUTPUT_STREAM_data_V |    pointer   |
+|OUTPUT_STREAM_TVALID       | out |    1|    axis    | OUTPUT_STREAM_dest_V |    pointer   |
+|OUTPUT_STREAM_TREADY       |  in |    1|    axis    | OUTPUT_STREAM_dest_V |    pointer   |
+|OUTPUT_STREAM_TDEST        | out |    5|    axis    | OUTPUT_STREAM_dest_V |    pointer   |
+|OUTPUT_STREAM_TKEEP        | out |    4|    axis    | OUTPUT_STREAM_keep_V |    pointer   |
+|OUTPUT_STREAM_TSTRB        | out |    4|    axis    | OUTPUT_STREAM_strb_V |    pointer   |
+|OUTPUT_STREAM_TUSER        | out |    4|    axis    | OUTPUT_STREAM_user_V |    pointer   |
+|OUTPUT_STREAM_TLAST        | out |    1|    axis    | OUTPUT_STREAM_last_V |    pointer   |
+|OUTPUT_STREAM_TID          | out |    5|    axis    |  OUTPUT_STREAM_id_V  |    pointer   |
++---------------------------+-----+-----+------------+----------------------+--------------+
+

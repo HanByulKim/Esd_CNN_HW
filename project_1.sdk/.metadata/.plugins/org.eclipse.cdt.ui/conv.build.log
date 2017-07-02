@@ -1,0 +1,31 @@
+15:38:00 **** Auto Build of configuration Debug for project conv ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:249:6: warning: implicit declaration of function 'fabs' [-Wimplicit-function-declaration]
+      if (fabs(feature_map_sw[i][j][k]-feature_map_hw[i][j][k])>0.00001) {
+      ^
+../src/main.c:249:10: warning: incompatible implicit declaration of built-in function 'fabs'
+      if (fabs(feature_map_sw[i][j][k]-feature_map_hw[i][j][k])>0.00001) {
+          ^
+../src/main.c:111:6: warning: variable 'num_of_trials' set but not used [-Wunused-but-set-variable]
+  int num_of_trials = 1;
+      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: conv.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "conv.elf"  ./src/lib_xconv_hw.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: conv.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size conv.elf  |tee "conv.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46544	  27960	 102196	 176700	  2b23c	conv.elf
+'Finished building: conv.elf.size'
+' '
+
+15:38:03 Build Finished (took 2s.786ms)
+

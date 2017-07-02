@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vivado HLS Report for 'Conv_Accel'
+================================================================
+* Date:           Sat Jun 17 17:05:35 2017
+
+* Version:        2015.3 (Build 1368829 on Mon Sep 28 20:31:51 PM 2015)
+* Project:        Lab7_HLS_Stream
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.55|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  3460202|  3460202|  3460203|  3460203|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 2.39ns
+ST_1: stg_3 [2/2] 2.39ns
+:18  call fastcc void @Conv_Accel_wrapped_conv_hw(i32* %INPUT_STREAM_data_V, i4* %INPUT_STREAM_keep_V, i4* %INPUT_STREAM_strb_V, i4* %INPUT_STREAM_user_V, i1* %INPUT_STREAM_last_V, i5* %INPUT_STREAM_id_V, i5* %INPUT_STREAM_dest_V, i32* %OUTPUT_STREAM_data_V, i4* %OUTPUT_STREAM_keep_V, i4* %OUTPUT_STREAM_strb_V, i4* %OUTPUT_STREAM_user_V, i1* %OUTPUT_STREAM_last_V, i5* %OUTPUT_STREAM_id_V, i5* %OUTPUT_STREAM_dest_V)
+
+
+ <State 2>: 2.71ns
+ST_2: stg_4 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i32* %INPUT_STREAM_data_V), !map !7
+
+ST_2: stg_5 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i4* %INPUT_STREAM_keep_V), !map !13
+
+ST_2: stg_6 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i4* %INPUT_STREAM_strb_V), !map !17
+
+ST_2: stg_7 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i4* %INPUT_STREAM_user_V), !map !21
+
+ST_2: stg_8 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i1* %INPUT_STREAM_last_V), !map !25
+
+ST_2: stg_9 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i5* %INPUT_STREAM_id_V), !map !29
+
+ST_2: stg_10 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i5* %INPUT_STREAM_dest_V), !map !33
+
+ST_2: stg_11 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %OUTPUT_STREAM_data_V), !map !37
+
+ST_2: stg_12 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i4* %OUTPUT_STREAM_keep_V), !map !43
+
+ST_2: stg_13 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %OUTPUT_STREAM_strb_V), !map !47
+
+ST_2: stg_14 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(i4* %OUTPUT_STREAM_user_V), !map !51
+
+ST_2: stg_15 [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(i1* %OUTPUT_STREAM_last_V), !map !55
+
+ST_2: stg_16 [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i5* %OUTPUT_STREAM_id_V), !map !59
+
+ST_2: stg_17 [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i5* %OUTPUT_STREAM_dest_V), !map !63
+
+ST_2: stg_18 [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @Conv_Accel_str) nounwind
+
+ST_2: stg_19 [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [12 x i8]* @p_str1, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+ST_2: stg_20 [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecInterface(i32* %OUTPUT_STREAM_data_V, i4* %OUTPUT_STREAM_keep_V, i4* %OUTPUT_STREAM_strb_V, i4* %OUTPUT_STREAM_user_V, i1* %OUTPUT_STREAM_last_V, i5* %OUTPUT_STREAM_id_V, i5* %OUTPUT_STREAM_dest_V, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2)
+
+ST_2: stg_21 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecInterface(i32* %INPUT_STREAM_data_V, i4* %INPUT_STREAM_keep_V, i4* %INPUT_STREAM_strb_V, i4* %INPUT_STREAM_user_V, i1* %INPUT_STREAM_last_V, i5* %INPUT_STREAM_id_V, i5* %INPUT_STREAM_dest_V, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2)
+
+ST_2: stg_22 [1/2] 2.71ns
+:18  call fastcc void @Conv_Accel_wrapped_conv_hw(i32* %INPUT_STREAM_data_V, i4* %INPUT_STREAM_keep_V, i4* %INPUT_STREAM_strb_V, i4* %INPUT_STREAM_user_V, i1* %INPUT_STREAM_last_V, i5* %INPUT_STREAM_id_V, i5* %INPUT_STREAM_dest_V, i32* %OUTPUT_STREAM_data_V, i4* %OUTPUT_STREAM_keep_V, i4* %OUTPUT_STREAM_strb_V, i4* %OUTPUT_STREAM_user_V, i1* %OUTPUT_STREAM_last_V, i5* %OUTPUT_STREAM_id_V, i5* %OUTPUT_STREAM_dest_V)
+
+ST_2: stg_23 [1/1] 0.00ns
+:19  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

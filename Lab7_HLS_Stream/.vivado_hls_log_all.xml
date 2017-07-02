@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SYN-103] Legalizing function name 'Conv_Accel_conv_hw&lt;24, 3, 10, 5, 20>' to 'Conv_Accel_conv_hw_24_3_10_5_20_s'." projectName="Lab7_HLS_Stream" solutionName="solution1" date="2017-06-17T17:05:33.818+0900" type="Warning"/>
+        <logs message="@W [XFORM-631] Renaming function 'wrapped_conv_hw&lt;24, 3, 10, 5, 20, 4, 5, 5>' (../hw2hlsstream/conv.hpp:84:32) into wrapped_conv_hw." projectName="Lab7_HLS_Stream" solutionName="solution1" date="2017-06-17T17:05:33.796+0900" type="Warning"/>
+        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 7 days." projectName="Lab7_HLS_Stream" solutionName="solution1" date="2017-06-17T17:04:29.211+0900" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 7 days." projectName="Lab7_HLS_Stream" solutionName="solution1" date="2017-06-17T17:07:57.495+0900" type="Warning"/>
+        <logs message="@W [LIC-102] License feature [VIVADO_HLS] is expiring in 7 days." projectName="Lab7_HLS_Stream" solutionName="solution1" date="2017-06-17T17:06:17.735+0900" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

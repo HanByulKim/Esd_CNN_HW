@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:43 MDT 2015
+# 
+# Start of session at: Fri Jun 16 15:40:17 2017
+# Process ID: 14056
+# Current directory: C:/Users/user/Desktop/project_1/project_1.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/user/Desktop/project_1/project_1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/user/Desktop/project_1/project_1.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

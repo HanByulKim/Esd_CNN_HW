@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="bias.h" path="C:\Users\user\Desktop\hw2hlsstream\bias.h"/>
+    <originFiles name="conv.hpp" path="C:\Users\user\Desktop\hw2hlsstream\conv.hpp"/>
+    <originFiles name="conv_accel.cpp" path="C:\Users\user\Desktop\hw2hlsstream\conv_accel.cpp"/>
+    <originFiles name="input_image.h" path="C:\Users\user\Desktop\hw2hlsstream\input_image.h"/>
+    <originFiles name="output.h" path="C:\Users\user\Desktop\hw2hlsstream\output.h"/>
+    <originFiles name="weight.h" path="C:\Users\user\Desktop\hw2hlsstream\weight.h"/>
+  </source>
+  <testbench>
+    <originFiles name="conv_test.cpp" path="C:\Users\user\Desktop\hw2hlsstream\conv_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

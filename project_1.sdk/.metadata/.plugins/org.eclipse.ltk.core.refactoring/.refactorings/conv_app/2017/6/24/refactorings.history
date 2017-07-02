@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;conv_app/src/weight_conv.h&apos; to &apos;weight.h&apos;" description="Rename resource &apos;weight_conv.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/weight_conv.h" name="weight.h" stamp="1497691241133" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;conv_app/src/bias_conv.h&apos; to &apos;bias.h&apos;" description="Rename resource &apos;bias_conv.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/bias_conv.h" name="bias.h" stamp="1497691256051" updateReferences="true"/>
+</session>

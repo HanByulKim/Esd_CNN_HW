@@ -1,0 +1,151 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Conv_Accel'" level="0">
+<item name = "Date">Sat Jun 17 17:05:37 2017
+</item>
+<item name = "Version">2015.3 (Build 1368829 on Mon Sep 28 20:31:51 PM 2015)</item>
+<item name = "Project">Lab7_HLS_Stream</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.55</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">3460202, 3460202, 3460203, 3460203, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_Conv_Accel_wrapped_conv_hw_fu_48">Conv_Accel_wrapped_conv_hw, 3460201, 3460201, 3460201, 3460201, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">14, 6, 1122, 1783</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 1</column>
+<column name="Register">-, -, 3, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">5, 2, 1, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="Conv_Accel_CONTROL_BUS_s_axi_U">Conv_Accel_CONTROL_BUS_s_axi, 0, 0, 36, 40</column>
+<column name="grp_Conv_Accel_wrapped_conv_hw_fu_48">Conv_Accel_wrapped_conv_hw, 14, 6, 1086, 1743</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">1, 3, 1, 3</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="grp_Conv_Accel_wrapped_conv_hw_fu_48_ap_start_ap_start_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_BUS_AWVALID">in, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_AWREADY">out, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_AWADDR">in, 5, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_WVALID">in, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_WREADY">out, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_WDATA">in, 32, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_WSTRB">in, 4, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_ARVALID">in, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_ARREADY">out, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_ARADDR">in, 5, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_RVALID">out, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_RREADY">in, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_RDATA">out, 32, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_RRESP">out, 2, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_BVALID">out, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_BREADY">in, 1, s_axi, CONTROL_BUS, return void</column>
+<column name="s_axi_CONTROL_BUS_BRESP">out, 2, s_axi, CONTROL_BUS, return void</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Conv_Accel, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, Conv_Accel, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, Conv_Accel, return value</column>
+<column name="INPUT_STREAM_TDATA">in, 32, axis, INPUT_STREAM_data_V, pointer</column>
+<column name="INPUT_STREAM_TVALID">in, 1, axis, INPUT_STREAM_dest_V, pointer</column>
+<column name="INPUT_STREAM_TREADY">out, 1, axis, INPUT_STREAM_dest_V, pointer</column>
+<column name="INPUT_STREAM_TDEST">in, 5, axis, INPUT_STREAM_dest_V, pointer</column>
+<column name="INPUT_STREAM_TKEEP">in, 4, axis, INPUT_STREAM_keep_V, pointer</column>
+<column name="INPUT_STREAM_TSTRB">in, 4, axis, INPUT_STREAM_strb_V, pointer</column>
+<column name="INPUT_STREAM_TUSER">in, 4, axis, INPUT_STREAM_user_V, pointer</column>
+<column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_last_V, pointer</column>
+<column name="INPUT_STREAM_TID">in, 5, axis, INPUT_STREAM_id_V, pointer</column>
+<column name="OUTPUT_STREAM_TDATA">out, 32, axis, OUTPUT_STREAM_data_V, pointer</column>
+<column name="OUTPUT_STREAM_TVALID">out, 1, axis, OUTPUT_STREAM_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TREADY">in, 1, axis, OUTPUT_STREAM_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TDEST">out, 5, axis, OUTPUT_STREAM_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TKEEP">out, 4, axis, OUTPUT_STREAM_keep_V, pointer</column>
+<column name="OUTPUT_STREAM_TSTRB">out, 4, axis, OUTPUT_STREAM_strb_V, pointer</column>
+<column name="OUTPUT_STREAM_TUSER">out, 4, axis, OUTPUT_STREAM_user_V, pointer</column>
+<column name="OUTPUT_STREAM_TLAST">out, 1, axis, OUTPUT_STREAM_last_V, pointer</column>
+<column name="OUTPUT_STREAM_TID">out, 5, axis, OUTPUT_STREAM_id_V, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">2.71</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="../hw2hlsstream/conv_accel.cpp:20">call, 2.71, 2.71, -, -, -, -, -, -, -, -, -, Conv_Accel_wrapped_conv_hw, -</column>
+</table>
+</item>
+</section>
+</profile>
